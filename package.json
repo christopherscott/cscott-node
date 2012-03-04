@@ -1,0 +1,16 @@
+{
+  "author": "Christopher Scott Hernandez <c.scott.hernandez@gmail.com> (http://christopher-scott.com)",
+  "name": "cscott-node-coffee",
+  "description": "Christopher Scott Personal site, blog, portfolio",
+  "version": "0.0.0",
+  "homepage": "v6.christopher-scott.com",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6.11"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
