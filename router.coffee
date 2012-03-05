@@ -17,7 +17,9 @@ module.exports.mount = (app) ->
     js_source = coffee.compile coffee_source
 
     # load up our context object with our shared globals
-    context = app: app
+    # not sure why but "require" isn't caught by the loop
+    # so we add it manually... TODO: fix this
+    context = app: app, require: require
     for key, value of global
       context[key] = global[key]
 
