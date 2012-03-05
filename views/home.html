@@ -1,8 +1,18 @@
 {{> header }}
 <h1>Oh hello {{name}}</h1>
+
+{{#error}}
+<p style="padding: 10px; border: 1px solid red; color: red">
+  {{error}}
+</p>
+{{/error}}
+
 <ul>
-  {{#stuff}}
-  <li>{{item}}</li>
-  {{/stuff}}
+  {{#latest}}
+  <li>
+    <h3>{{title}}</h3>
+    <p>{{body}}</p>
+  </li>
+  {{/latest}}
 </ul>
 {{> footer }}
