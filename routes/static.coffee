@@ -1,7 +1,11 @@
+require "coffee-script"
+Post = require "./models/Post"
+
+
 app.get "/", (req, res) ->
-  res.render "home", 
-    name: "chris"
-    stuff: [{item: "banana"}, {item: "blake griffin"}, {item: "world peace"}]
-
-
-
+  latest_posts = Post.find({})
+    .limit(5)
+    .run((err, docs) ->
+      res.render "home",
+        latest: docs
+    )
