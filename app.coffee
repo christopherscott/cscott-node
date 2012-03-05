@@ -3,6 +3,11 @@ express = require "express"
 app = express.createServer()
 hulk = require "hulk-hogan"
 router = require "./router"
+{dbhost, dbport, dbname} = require("./config").database
+
+# initialize database connection
+mongoose = require "mongoose"
+mongoose.connect "mongodb://#{dbhost}:#{dbport}/#{dbname}"
 
 app.configure(() ->
 
