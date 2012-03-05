@@ -2,7 +2,7 @@
 
 Converting my personal site from Ruby on Rails and MySQL to Node.js, written in CoffeeScript and MongoDB
 
-## Technology stack:
+##stack:
 
 - CoffeeScript
 - Node.js (0.6.11)
