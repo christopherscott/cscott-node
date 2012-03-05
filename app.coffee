@@ -20,6 +20,11 @@ app.configure(() ->
   app.use(express.static("#{__dirname}/public"))
   app.use(app.router)
 
+  app.use(express.errorHandler(
+    showStack: true
+    dumpExceptions: true
+  ))
+
 )
 
 # mount routes for the app
